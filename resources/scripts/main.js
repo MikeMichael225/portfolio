@@ -1,4 +1,3 @@
-
 function toggleNav() {
     var x = document.querySelector(".nav");
     if (x.className === "nav") {

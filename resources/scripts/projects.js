@@ -33,3 +33,6 @@
         content.style.marginRight = "1.5rem";
     }
 }());
+
+const errMessage = document.querySelector('.project-error');
+errMessage.style.display = "none";
