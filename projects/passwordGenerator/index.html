@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<title>Password Generator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="../../resources/images/favicon.png" rel="icon" type="image/png">
+</head>
+
+<body>
+	<div class="inputs">
+		<h1>Password Generator</h1>
+
+		<input type="text" disabled>
+		<input type="button" value="Generate" onclick="generatePassword()">
+		<input type="button" value="Copy" onclick="copy(input.value)">
+
+		<br>
+
+		<div class="checkboxes">
+			<label for=".letters">Letters</label>
+			<input class="letters" type="checkbox" checked> |
+			<label for=".numbers">Numbers</label>
+			<input class="numbers" type="checkbox" checked> |
+			<label for=".special">Special</label>
+			<input class="special" type="checkbox" checked>
+		</div>
+		<h1 class="result"></h1>
+	</div>
+</body>
+
+<script src="main.js"></script>
+
+</html>

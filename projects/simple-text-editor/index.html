@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="alerts.css">
+    <script src="main.js" defer></script>
+    <script src="alerts.js" defer></script>
+    <script src="editor.js" defer></script>
+    <link href="../../resources/images/favicon.png" rel="icon" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <div class='control-panel'>
+            <h1 class="control-panel-header">Simple Text Editor</h1>
+            <button class="save-file-btn">Save</button>
+        </div>
+
+        <div class="text-field" spellcheck="true" contenteditable="true"></div>
+
+        <div class="confirm-alert-container confirm-save hide">
+            <div class="confirm-box-container">
+                <div class="confirm-box">
+                    <label for=".file-name-inp">Save as: </label>
+                    <input type="text" class="file-name-inp" placeholder="File name">
+                    <div class="confirm-button-container">
+                        <button class="confirm-action confirm-save-btn">Confirm</button>
+                        <button class="confirm-action cancel-save-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="confirm-alert-container confirm-overwrite hide">
+            <div class="confirm-box-container">
+                <div class="confirm-box">
+                    <label>This action will overwrite current text!</label>
+                    <div class="confirm-button-container">
+                        <button class="confirm-action confirm-upload">Confirm</button>
+                        <button class="confirm-action cancel-upload">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

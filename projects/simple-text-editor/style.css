@@ -1,0 +1,97 @@
+*, *::after, *::before {
+    font-family: Verdana;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+    min-height: 100vh;
+    height: fit-content;
+
+    background-color: lightgray;
+    color: purple;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+    height: fit-content;
+
+    margin: 0;
+    padding: 0;
+}
+
+.control-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: purple;
+    color: white;
+
+    width: 100vw;
+    min-height: 10vh;
+    max-height: 10vh;
+}
+
+.control-panel-header {
+    margin: 2rem;
+}
+
+.save-file-btn {
+    --h-padding: 1.25rem;
+    --v-padding: 0.4rem;
+
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+
+    border: 2px solid white;
+
+    margin: 2rem;
+    padding-left: var(--h-padding); padding-right: var(--h-padding);
+    padding-top: var(--v-padding); padding-bottom: var(--v-padding);
+   
+    outline: none;
+}
+
+.save-file-btn:hover {
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}
+
+.text-field {
+    width: 70vw;
+    min-height: 79.5vh;
+
+    margin: 0;
+    padding: 3rem;
+    outline: none;
+
+    background-color: white;
+}
+
+.text-field::selection {
+    background-color: purple;
+    color: white;
+}
+
+.confirm-overwrite .confirm-box {
+    text-align: center !important;
+    align-items: center !important;
+}
+
+.cancel-upload {
+    background-color: white !important;
+    color: purple !important;
+}

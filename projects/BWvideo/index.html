@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&W Video</title>
+    <script src="https://momentjs.com/downloads/moment.min.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="../../resources/images/favicon.png" rel="icon" type="image/png">
+</head>
+
+<body>
+    <div class="header">
+        Play any video you want in black & white colors!
+    </div>
+    <div class="container">
+        <div class="drop-area">
+            DROP A VIDEO HERE!
+        </div>
+        <div class="video-container hide">
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <canvas class="canvas"></canvas>
+            <span class="play">
+                <img ondragstart="return false" class="image play-image" src="images/play.png">
+            </span>
+            <span class="pause">
+                <img ondragstart="return false" class=" image pause-image" src="images/pause.png">
+            </span>
+            <span class="stop">
+                <img ondragstart="return false" class=" image stop-image" src="images/stop.png">
+            </span>
+            <span class="video-current-time"></span>
+            <span class="video-volume">
+                <img ondragstart="return false" class="volume-image" src="images/volume.png" alt="V">
+                <input class="volume-input" type="range" min="0" max="100" on="">
+            </span>
+            <video class="video" autoplay crossorigin="anonymous" />
+        </div>
+    </div>
+    <div class="footer">
+        Please use videos with resolution up to 640x320 for the best results.
+        <button class="footer-close-btn">Close</button>
+    </div>
+</body>
+
+<script>
+    (function () {
+        var video = document.querySelector('.video');
+        var volumeINP = document.querySelector('.volume-input');
+        volumeINP.value = parseInt(document.cookie.substring(document.cookie.indexOf('video-volume=') + 13, document.cookie.length));
+        video.volume = parseInt(volumeINP.value) / 100;
+        document.querySelector('.volume-image').onclick = function () {
+            volumeINP.value = 0;
+            document.cookie = 'video-volume=' + volumeINP.value;
+            video.volume = parseInt(volumeINP.value) / 100;
+        }
+    })();
+</script>
+
+<script>
+    (function () {
+        var footer = document.querySelector('.footer');
+        var closeBTN = document.querySelector('.footer-close-btn');
+        var cookies = document.cookie;
+
+        if (cookies.includes('close-footer=true'))
+            hide(footer);
+
+        closeBTN.addEventListener('click', () => {
+            hide(footer);
+            document.cookie = "close-footer=true";
+        });
+
+        function hide(e) {
+            e.style.display = 'none'
+        }
+    })();
+</script>
+
+</html>
