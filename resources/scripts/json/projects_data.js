@@ -39,5 +39,10 @@ const projects = `
         "name": "Analogue Clock",
         "description": "This website shows current time on analogue clock created with HTML, CSS and JS.",
         "href": "https://mikemichael225.github.io/analogue_clock/"
+    },
+    {
+        "name": "YT Music Player",
+        "description": "This website allows you to play any music from youtube while displaying it's subtitles.",
+        "href": "https://mikemichael225.github.io/YTSubtitlePlayer/"
     }
 ]`;
